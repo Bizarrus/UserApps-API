@@ -1,7 +1,7 @@
 # ![Mascot](https://chat.knuddels.de/pics/frame_icon_knuddel1.png) UserApps-API
 These UserApps-API with MySQL features is for your Knuddels.de App ![:-)](https://chat.knuddels.de/pics/sm_00.gif)
 
-- [x] Some secutity options
+- [x] Some security options
 - [x] Works over `HTTPS/SSL`
 - [x] MySQL API
 - [x] Good documented
