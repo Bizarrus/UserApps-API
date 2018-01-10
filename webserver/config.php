@@ -77,7 +77,7 @@
 	 *		DEV		= Developer.Knuddels.de
 	 *		TEST	= TestServer.Knuddels.de
 	*/
-	define('ALLOWEDED_CHATSERVERS', 'DE,DEV,TEST');
+	define('ALLOWED_CHATSERVERS', 'DE,DEV,TEST');
 	
 	/*
 	 * Check allowed developers.
@@ -85,7 +85,7 @@
 	 * @default	true
 	 * @possible true, false
 	*/
-	define('ALLOWEDED_DEVELOPERS', true);
+	define('ALLOWED_DEVELOPERS', true);
 	
 	/*
 	 * Check allowed channels.
@@ -95,7 +95,7 @@
 	 * @default	true
 	 * @possible true, false
 	*/
-	#define('ALLOWEDED_CHANNELS', true);
+	#define('ALLOWED_CHANNELS', true);
 	
 	/*
 	 * Check allowed Apps.
@@ -106,5 +106,5 @@
 	 * @default	true
 	 * @possible true, false
 	*/
-	#define('ALLOWEDED_APPS', true);
+	#define('ALLOWED_APPS', true);
 ?>

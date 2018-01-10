@@ -66,8 +66,8 @@
 	}
 	
 	/* Check if Server is allowed */
-	if(!$response->error && defined('ALLOWEDED_CHATSERVERS') && ALLOWEDED_CHATSERVERS !== '*' && ALLOWEDED_CHATSERVERS !== false) {
-		$allowed = explode(',', ALLOWEDED_CHATSERVERS);
+	if(!$response->error && defined('ALLOWED_CHATSERVERS') && ALLOWED_CHATSERVERS !== '*' && ALLOWED_CHATSERVERS !== false) {
+		$allowed = explode(',', ALLOWED_CHATSERVERS);
 		
 		if(!isset($_SERVER['HTTP_K_CHATSERVER']) || preg_match('/^knuddels(?<server>DEV|DE|CH|COM|AT|TEST)$/Uis', $_SERVER['HTTP_K_CHATSERVER'], $chatserver) && !in_array($chatserver['server'], $allowed) && !in_array('*', $allowed)) {
 			$response->error	= true;
@@ -83,7 +83,7 @@
 	}
 	
 	/* Check if developer is allowed */
-	if(!$response->error && defined('ALLOWEDED_DEVELOPERS') && ALLOWEDED_DEVELOPERS) {
+	if(!$response->error && defined('ALLOWED_DEVELOPERS') && ALLOWED_DEVELOPERS) {
 		$developers = (file_exists('knuddelsAccess.txt') ? array_filter(explode(PHP_EOL, file_get_contents('knuddelsAccess.txt'))) : null);
 
 		if(!isset($_SERVER['HTTP_K_DEVELOPERID']) || $developers === null || !in_array($_SERVER['HTTP_K_DEVELOPERID'], $developers) && !in_array('*', $developers)) {
@@ -102,7 +102,7 @@
 	}
 	
 	/* Check if channel is allowed */
-	if(!$response->error && defined('ALLOWEDED_CHANNELS') && ALLOWEDED_CHANNELS) {
+	if(!$response->error && defined('ALLOWED_CHANNELS') && ALLOWED_CHANNELS) {
 		$channels = (file_exists('knuddelsAccess.txt') ? array_filter(explode(PHP_EOL, file_get_contents('knuddelsAccess.txt'))) : null);
 
 		if(!isset($_SERVER['HTTP_K_CHANNEL']) || $channels === null || !in_array('# Channel: ' . $_SERVER['HTTP_K_CHANNEL'], $channels) && !in_array('# Channel: *', $channels)) {
@@ -121,7 +121,7 @@
 	}
 	
 	/* Check if app is allowed */
-	if(!$response->error && defined('ALLOWEDED_APPS') && ALLOWEDED_APPS) {
+	if(!$response->error && defined('ALLOWED_APPS') && ALLOWED_APPS) {
 		$apps = (file_exists('knuddelsAccess.txt') ? array_filter(explode(PHP_EOL, file_get_contents('knuddelsAccess.txt'))) : null);
 
 		if(!isset($_SERVER['HTTP_K_APPKEY']) || $apps === null || !in_array('# App: ' . $_SERVER['HTTP_K_APPKEY'], $apps) && !in_array('# App: *', $apps)) {
