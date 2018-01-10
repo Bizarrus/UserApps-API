@@ -99,7 +99,7 @@
 	
 	/*
 	 * Check allowed Apps.
-	 * NOTE:	All possible/whitelisted UserApps's must be defined in your knuddelsAccess.txt.
+	 * NOTE:	All possible/whitelisted UserApps must be defined in your knuddelsAccess.txt.
 	 *		The name of your app is the name of the FTP-Directory!
 	 * 		For each Line, you must define "# App: <NAME>" or
 	 *		you can whitelist all Apps with "# App: *"
