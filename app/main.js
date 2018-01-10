@@ -1,4 +1,4 @@
-require('classes/API.class.js');
+require('classes/API.class.min.js');
 
 var App = (new function AppContainer() {
 	this.onAppStart = function onAppStart() {
